@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         JustInTime_Dev
-// @version      1.0.1
+// @version      1.0.5
 // @author       Allure149
 // @include      *://leitstellenspiel.de/*
 // @include      *://www.leitstellenspiel.de/*
@@ -8,6 +8,7 @@
 // @include      *://www.missionchief.co.uk/*
 // @include      *://missionchief.com/*
 // @include      *://www.missionchief.com/*
+// @updateURL    https://github.com/types140/JustInTime/raw/master/JustInTime.dev.js
 // @grant        none
 // ==/UserScript==
 /* global $ */
@@ -218,8 +219,8 @@
         text_minutes = "min.";
         text_seconds = "sec.";
         text_options = "options";
-        text_event = "event";
-        text_federation = "alliance";
+        text_event = "Event";
+        text_federation = "Alliance";
         text_kilometers = "miles";
     } else if(I18n.locale == "fj"){
         arrFahrzeugDaten = arrFahrzeugDatenFJ;
@@ -241,8 +242,8 @@
         text_minutes = "min.";
         text_seconds = "sec.";
         text_options = "options";
-        text_event = "event";
-        text_federation = "alliance";
+        text_event = "Event";
+        text_federation = "Alliance";
         text_kilometers = "miles";
     }
 
