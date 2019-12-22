@@ -373,9 +373,6 @@
             if ($(this).find("td:nth-child(4)").text().indexOf(text_kilometers) >= 0) return true;
             car_secs_temp = $(this).find("td:nth-child(4)").text().replace(" " + text_hours + " ", ":").replace(" " + text_minutes + " ", ":").replace(" " + text_seconds, "").split(":").map(function(x){ return parseInt(x,10) });
 
-            console.log("car_secs_temp.length: " + car_secs_temp.length);
-            console.log("car_secs_temp ARRAY: " + car_secs_temp);
-            console.log("calc it: " + (car_secs_temp[0] * 60) + " + " + car_secs_temp[1]);
             car_secs = (car_secs_temp.length == 3) ? (car_secs_temp[0] * 3600) + (car_secs_temp[1] * 60) + car_secs_temp[2] : (car_secs_temp.length == 2) ? (car_secs_temp[0] * 60) + car_secs_temp[1] : car_secs_temp[0];
 
             $.each(car_ids, function(i,e){
