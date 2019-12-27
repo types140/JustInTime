@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         JustInTime
-// @version      1.0.1
+// @version      1.1.0
 // @author       Allure149
-// @include      *://leitstellenspiel.de/*
-// @include      *://www.leitstellenspiel.de/*
-// @include      *://missionchief.co.uk/*
-// @include      *://www.missionchief.co.uk/*
-// @include      *://missionchief.com/*
-// @include      *://www.missionchief.com/*
+// @include      *://leitstellenspiel.de/missions/*
+// @include      *://www.leitstellenspiel.de/missions/*
+// @include      *://missionchief.co.uk/missions/*
+// @include      *://www.missionchief.co.uk/missions/*
+// @include      *://missionchief.com/missions/*
+// @include      *://www.missionchief.com/missions/*
 // @updateURL    https://github.com/types140/JustInTime/raw/master/JustInTime.user.js
 // @grant        none
 // ==/UserScript==
@@ -173,97 +173,97 @@
                                 {id: 15, name: "Incident Command and Control Unit (ICCU)", personal: 0},
                                 {id: 16, name: "Rescue Pump", personal: 0}];
 
-    let text_saved, text_own_missions, text_after, text_represent, text_warning, text_check_cars, text_close, text_save, text_selection, text_event, text_federation, arrFahrzeugDaten;
-    let text_timeframe, text_available_car, text_start_mission, text_involved, text_loading, text_hours, text_minutes, text_seconds, text_options, text_kilometers;
+    let textSaved, textOwnMissions, textAfter, textRepresent, textWarning, textCheckCars, textClose, textSave, textSelection, textEvent, textFederation, arrFahrzeugDaten;
+    let textTimeframe, textAvailableCar, textStartMission, textInvolved, textLoading, textHours, textMinutes, textSeconds, textOptions, textKilometers;
 
     if(I18n.locale == "de"){
         arrFahrzeugDaten = arrFahrzeugDatenDE;
-        text_saved = "Gespeichert";
-        text_own_missions = "Eigene Einsätze einbeziehen";
-        text_after = "Ab";
-        text_represent = "Sekunden darstellen als";
-        text_warning = "Warnung";
-        text_check_cars = "Folgende Fahrzeuge werden geprüft";
-        text_close = "Schließen";
-        text_save = "Speichern";
-        text_selection = "Auswahl anzeigen";
-        text_timeframe = "Zeitfenster überschritten";
-        text_available_car = "Kein Fahrzeug verfügbar";
-        text_start_mission = "Einsatz hat noch nicht begonnen";
-        text_involved = "Bereits beteiligt";
-        text_loading = "Lade";
-        text_hours = "Std.";
-        text_minutes = "Min.";
-        text_seconds = "Sek.";
-        text_options = "Optionen";
-        text_event = "Event";
-        text_federation = "Verband";
-        text_kilometers = "km";
+        textSaved = "Gespeichert";
+        textOwnMissions = "Eigene Einsätze einbeziehen";
+        textAfter = "Ab";
+        textRepresent = "Sekunden darstellen als";
+        textWarning = "Warnung";
+        textCheckCars = "Folgende Fahrzeuge werden geprüft";
+        textClose = "Schließen";
+        textSave = "Speichern";
+        textSelection = "Auswahl anzeigen";
+        textTimeframe = "Zeitfenster überschritten";
+        textAvailableCar = "Kein Fahrzeug verfügbar";
+        textStartMission = "Einsatz hat noch nicht begonnen";
+        textInvolved = "Bereits beteiligt";
+        textLoading = "Lade";
+        textHours = "Std.";
+        textMinutes = "Min.";
+        textSeconds = "Sek.";
+        textOptions = "Optionen";
+        textEvent = "Event";
+        textFederation = "Verband";
+        textKilometers = "km";
     } else if(I18n.locale == "en"){
         arrFahrzeugDaten = arrFahrzeugDatenEN;
-        text_saved = "Saved";
-        text_own_missions = "Invole owned missions";
-        text_after = "After"
-        text_represent = "seconds represent as";
-        text_warning = "warning";
-        text_check_cars = "The following cars will be checked";
-        text_close = "close";
-        text_save = "save";
-        text_selection = "Show selection";
-        text_timeframe = "Timeframe exceeded";
-        text_available_car = "No car available";
-        text_start_mission = "Mission didn't start yet";
-        text_involved = "Already involved";
-        text_loading = "Loading";
-        text_hours = "H";
-        text_minutes = "min.";
-        text_seconds = "sec.";
-        text_options = "options";
-        text_event = "Event";
-        text_federation = "Alliance";
-        text_kilometers = "miles";
+        textSaved = "Saved";
+        textOwnMissions = "Invole owned missions";
+        textAfter = "After"
+        textRepresent = "seconds represent as";
+        textWarning = "warning";
+        textCheckCars = "The following cars will be checked";
+        textClose = "close";
+        textSave = "save";
+        textSelection = "Show selection";
+        textTimeframe = "Timeframe exceeded";
+        textAvailableCar = "No car available";
+        textStartMission = "Mission didn't start yet";
+        textInvolved = "Already involved";
+        textLoading = "Loading";
+        textHours = "H";
+        textMinutes = "min.";
+        textSeconds = "sec.";
+        textOptions = "options";
+        textEvent = "Event";
+        textFederation = "Alliance";
+        textKilometers = "miles";
     } else if(I18n.locale == "fj"){
         arrFahrzeugDaten = arrFahrzeugDatenFJ;
-        text_saved = "Saved";
-        text_own_missions = "Invole owned missions";
-        text_after = "After"
-        text_represent = "seconds represent as";
-        text_warning = "warning";
-        text_check_cars = "The following cars will be checked";
-        text_close = "close";
-        text_save = "save";
-        text_selection = "Show selection";
-        text_timeframe = "Timeframe exceeded";
-        text_available_car = "No car available";
-        text_start_mission = "Mission didn't start yet";
-        text_involved = "Already involved";
-        text_loading = "Loading";
-        text_hours = "H";
-        text_minutes = "min.";
-        text_seconds = "sec.";
-        text_options = "options";
-        text_event = "Event";
-        text_federation = "Alliance";
-        text_kilometers = "miles";
+        textSaved = "Saved";
+        textOwnMissions = "Invole owned missions";
+        textAfter = "After"
+        textRepresent = "seconds represent as";
+        textWarning = "warning";
+        textCheckCars = "The following cars will be checked";
+        textClose = "close";
+        textSave = "save";
+        textSelection = "Show selection";
+        textTimeframe = "Timeframe exceeded";
+        textAvailableCar = "No car available";
+        textStartMission = "Mission didn't start yet";
+        textInvolved = "Already involved";
+        textLoading = "Loading";
+        textHours = "H";
+        textMinutes = "min.";
+        textSeconds = "sec.";
+        textOptions = "options";
+        textEvent = "Event";
+        textFederation = "Alliance";
+        textKilometers = "miles";
     }
 
     if (localStorage.getItem("jit_own_missions") === null) {
-        localStorage.jit_own_missions = true; // eigene_einsaetze = false wenn ausschliesslich Verbandseinsaetze geprueft werden sollen
+        localStorage.jit_own_missions = true;
         localStorage.jit_car_ids = JSON.stringify(["1", "2"]);
         localStorage.jit_warning_time = "60";
     }
 
-    let car_ids = JSON.parse(localStorage.jit_car_ids);
-    let eigene_einsaetze = localStorage.jit_own_missions;
-    let warning_time = parseInt(localStorage.jit_warning_time, 10);
+    let carIds = JSON.parse(localStorage.jit_car_ids);
+    let eigeneEinsaetze = localStorage.jit_own_missions;
+    let warningTime = parseInt(localStorage.jit_warning_time, 10);
 
     $("#group_max_distance").after(`<div>
-    <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#jit_options">JIT ` + text_options + `</button>
+    <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#jit_options">JIT ${textOptions}</button>
     <div class="modal fade" id="jit_options" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">JustInTime ` + text_options + `</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">JustInTime ${textOptions}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -272,24 +272,24 @@
                     <div class="col-md-6">
                         <div class="checkbox-inline" id="jit_check_1" style="margin: 5px 0">
                             <input class="" type="checkbox" value="" id="jit_own_missions" name="jit_own_missions">
-                            <label class="" for="jit_own_missions"> ` + text_own_missions + `?</label>
+                            <label class="" for="jit_own_missions"> ${textOwnMissions}?</label>
                         </div>
                         <div class="form-inline">
-                            ` + text_after + `<input type="text" class="form-control input-sm" id="jit_textbox" style="margin: 0 5px; width: 50px" maxlength="4"/>` + text_represent + `<span class="alert alert-warning" style="padding: 2px 5px; margin:0 5px;">` + text_warning + `</span>.
+                            ${textAfter}<input type="text" class="form-control input-sm" id="jit_textbox" style="margin: 0 5px; width: 50px" maxlength="4"/>${textRepresent}<span class="alert alert-warning" style="padding: 2px 5px; margin:0 5px;">${textWarning}</span>.
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div id="jit_check_ids"><h4>` + text_check_cars + `:</h4> </div>
+                        <div id="jit_check_ids"><h4>${textCheckCars}:</h4> </div>
                     </div>
                     <hr class="float-left">
-                    <div id="jit_show_checkboxes">` + text_selection + ` <div class="glyphicon glyphicon-chevron-down" id="jit_chevron"></div></div>
+                    <div id="jit_show_checkboxes">${textSelection} <div class="glyphicon glyphicon-chevron-down" id="jit_chevron"></div></div>
                     <div class="form-check jit_hide" id="jit_check_2">
                         <hr>
                         <ul id="jit_ids_ul" class="nav nav-list"></ul>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">` + text_close + `</button>
-                        <button type="button" id="jit_save" class="btn btn-primary">` + text_save + `</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">${textClose}</button>
+                        <button type="button" id="jit_save" class="btn btn-primary">${textSave}</button>
                     </div>
                 </div>
             </div>
@@ -303,9 +303,9 @@
     });
 
     $.each(arrFahrzeugDaten, function(i,e){
-        $("#jit_ids_ul").append('<li><div class="btn-group-toggle" data-toggle="buttons"><label class="btn btn-info jit_group_toggle" id="jit_id_label' + e.id + '" for="jit_id_checkboxes' + e.id + '"><input type="checkbox" value="' + e.id + '" id="jit_id_checkboxes' + e.id + '" name="jit_ids[]" autocomplete="off"/> ' + e.name + '</label></div></li>');
+        $("#jit_ids_ul").append(`<li><div class="btn-group-toggle" data-toggle="buttons"><label class="btn btn-info jit_group_toggle" id="jit_id_label${e.id}" for="jit_id_checkboxes${e.id}"><input type="checkbox" value="${e.id}" id="jit_id_checkboxes${e.id}" name="jit_ids[]" autocomplete="off"/> ${e.name}</label></div></li>`);
 
-        $.each(car_ids, function(i2,e2){
+        $.each(carIds, function(i2,e2){
             if(i == e2) {
                 $("#jit_id_checkboxes" + e2).prop("checked", true);
                 $("#jit_id_label" + e2).toggleClass("btn-info btn-success").addClass("active");
@@ -314,7 +314,7 @@
         });
     });
 
-    $('body').on("click", ".jit_group_toggle", function(e) {
+    $("body").on("click", ".jit_group_toggle", function(e) {
         e.preventDefault();
 
         $(this).toggleClass('btn-info btn-success');
@@ -325,10 +325,10 @@
         checkbox.prop('checked', !checked).removeClass("active");
     });
 
-    if(eigene_einsaetze == "true") $("#jit_own_missions").prop("checked", true);
+    if(eigeneEinsaetze == "true") $("#jit_own_missions").prop("checked", true);
     else $("#jit_own_missions").prop("checked", false);
 
-    $("#jit_textbox").val(warning_time);
+    $("#jit_textbox").val(warningTime);
 
     $("body").on("click", "#jit_save", function(){
         let checkbox_ids = [];
@@ -341,7 +341,7 @@
         localStorage.jit_warning_time = $("#jit_textbox").val();
 
         $("#jit_body").children().addClass("jit_hide");
-        $("#jit_body").addClass("text-center").html("<h1>" + text_saved + ".</h1>");
+        $("#jit_body").addClass("text-center").html(`<h1>${textSaved}.</h1>`);
 
         setTimeout(function(){
             $("#jit_options").modal("toggle");
@@ -350,79 +350,87 @@
         location.reload();
     });
 
-    const mission_verband = $("#missionH1").text().trim().startsWith("[" + text_federation + "]") ? true : false;
-    const mission_event = $("#missionH1").text().trim().startsWith("[" + text_event + "]") ? true : false;
-    const mission_id = $("#mission_reply_mission_id").val();
-    let mission_time = $(".mission_header_info").find("#mission_countdown_" + mission_id).text().split(":").map(function(x){ return parseInt(x,10) });
-    let mission_secs = (mission_time.length == 2) ? (mission_time[0] * 60) + mission_time[1] : (mission_time[0] * 3600) + (mission_time[1] * 60) + mission_time[2];
-    let vehicle_type_id = 0; // aktuell gefiltertes Fahrzeug
-    let car_id = 0; // != 0 wenn korrektes Fahrzeug gefunden wurde
-    let car_secs = 0;
-    let car_secs_temp = 0;
-    let time_remain = 0;
-    let end_text = "";
-    let text_class = "";
+    const missionVerband = $("#missionH1").text().trim().startsWith("[" + textFederation + "]") ? true : false;
+    const missionEvent = $("#missionH1").text().trim().startsWith("[" + textEvent + "]") ? true : false;
+    const missionId = $("#mission_reply_mission_id").val();
+    let missionTime = $(".mission_header_info").find("#mission_countdown_" + missionId).text().split(":").map(function(x){ return parseInt(x,10) });
+    let missionSecs = (missionTime.length == 2) ? (missionTime[0] * 60) + missionTime[1] : (missionTime[0] * 3600) + (missionTime[1] * 60) + missionTime[2];
+    let vehicleTypeId = 0; // aktuell gefiltertes Fahrzeug
+    let carId = 0; // != 0 wenn korrektes Fahrzeug gefunden wurde
+    let carSecs = 0;
+    let carSecsTemp = 0;
+    let timeRemain = 0;
+    let endText = "";
+    let textClass = "";
     let counts = 0;
 
-    if(eigene_einsaetze == "false" && !mission_verband && !mission_event) return false;
+    if(eigeneEinsaetze == "false" && !missionVerband && !missionEvent) return false;
 
     function jit_main(){
         $(".vehicle_select_table_tr").each(function(){
-            vehicle_type_id = $(this).find("td:nth-child(3)").attr("vehicle_type_id");
+            vehicleTypeId = $(this).find("td:nth-child(3)").attr("vehicle_type_id");
 
-            if ($(this).find("td:nth-child(4)").text().indexOf(text_kilometers) >= 0) return true;
-            car_secs_temp = $(this).find("td:nth-child(4)").text().replace(" " + text_hours + " ", ":").replace(" " + text_minutes + " ", ":").replace(" " + text_seconds, "").split(":").map(function(x){ return parseInt(x,10) });
+            if ($(this).find("td:nth-child(4)").text().indexOf(textKilometers) >= 0) return true;
+            carSecsTemp = $(this).find("td:nth-child(4)").text().replace(" " + textHours + " ", ":").replace(" " + textMinutes + " ", ":").replace(" " + textSeconds, "").split(":").map(function(x){ return parseInt(x,10) });
 
-            car_secs = (car_secs_temp.length == 3) ? (car_secs_temp[0] * 3600) + (car_secs_temp[1] * 60) + car_secs_temp[2] : (car_secs_temp.length == 2) ? (car_secs_temp[0] * 60) + car_secs_temp[1] : car_secs_temp[0];
+            carSecs = (carSecsTemp.length == 3) ? (carSecsTemp[0] * 3600) + (carSecsTemp[1] * 60) + carSecsTemp[2] : (carSecsTemp.length == 2) ? (carSecsTemp[0] * 60) + carSecsTemp[1] : carSecsTemp[0];
 
-            $.each(car_ids, function(i,e){
-                if(e == vehicle_type_id) {
-                    car_id = vehicle_type_id;
-                    time_remain = mission_secs - car_secs;
+            $.each(carIds, function(i,e){
+                if(e == vehicleTypeId) {
+                    carId = vehicleTypeId;
+                    timeRemain = missionSecs - carSecs;
                     return false;
                 }
             });
 
-            if(car_id != 0) {
-                if(time_remain > warning_time) {
-                    text_class = "alert-success";
-                } else if(time_remain <= warning_time && time_remain > 0) {
-                    text_class = "alert-warning";
-                } else if(time_remain < 0){
-                    text_class = "alert-danger";
-                    end_text = text_timeframe + "!";
+            if(carId != 0) {
+                if(timeRemain > warningTime) {
+                    textClass = "alert-success";
+                } else if(timeRemain <= warningTime && timeRemain > 0) {
+                    textClass = "alert-warning";
+                } else if(timeRemain < 0){
+                    textClass = "alert-danger";
+                    endText = textTimeframe + "!";
                 }
 
                 return false;
             } else {
-                text_class = "alert-danger";
-                end_text = text_available_car + "!";
+                textClass = "alert-danger";
+                endText = textAvailableCar + "!";
             }
         });
 
-        if(isNaN(mission_secs)) {
-            text_class = "alert-info";
-            end_text = text_start_mission + ".";
+        if(isNaN(missionSecs)) {
+            textClass = "alert-info";
+            endText = textStartMission + ".";
         }
 
-        if($("#missionH1 > span").hasClass("glyphicon-user")) {
-            text_class = "alert-info";
-            end_text = text_involved + ".";
+        if($('div[id^="mission_bar_"] >> .progress-bar').css("width") == 0 + "px"){
+            textClass = "alert-info";
+            endText = "Einsatz noch zu erreichen.";
         }
 
-        if(time_remain > 0 && end_text != text_involved + ".") missionCountdown(time_remain, 'remaining');
-        else $("#mission_countdown_remaining").text(end_text);
+        let ownVehiclesOnDrive = $("#mission_vehicle_driving >> tr").find("td.hidden-xs >> a.btn-backalarm-ajax").length;
+        let ownVehiclesAtMission = $("#mission_vehicle_at_mission").find(".btn-backalarm-ajax").length;
 
-        $("#mission_countdown_remaining").removeClass().addClass("alert " + text_class);
+        if(ownVehiclesOnDrive + ownVehiclesAtMission > 0) {
+            textClass = "alert-info";
+            endText = textInvolved + ".";
+        }
+
+        if(timeRemain > 0 && endText != textInvolved + ".") missionCountdown(timeRemain, 'remaining');
+        else $("#mission_countdown_remaining").text(endText);
+
+        $("#mission_countdown_remaining").removeClass().addClass("alert " + textClass);
     }
 
     setTimeout(jit_main, 1000);
 
     $("body").on("click", ".calculateTime", function(){
         setTimeout(function(){
-            jit_main(function(){ $("#mission_countdown_remaining").removeClass("alert-info"); $("#mission_countdown_remaining").addClass(text_class); });
+            jit_main(function(){ $("#mission_countdown_remaining").removeClass("alert-info"); $("#mission_countdown_remaining").addClass(textClass); });
         }, 1000);
     });
 
-    $("#missionH1").after("<div id='mission_countdown_remaining' class='alert alert-info' style='float:right; padding: 2px 5px; margin:0'>" + text_loading + " ...</div>");
+    $("#missionH1").after(`<div id='mission_countdown_remaining' class='alert alert-info' style='float:right; padding: 2px 5px; margin:0'>${textLoading} ...</div>`);
 })();
