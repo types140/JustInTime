@@ -174,7 +174,7 @@
                                 {id: 16, name: "Rescue Pump", personal: 0}];
 
     let textSaved, textOwnMissions, textAfter, textRepresent, textWarning, textCheckCars, textClose, textSave, textSelection, textEvent, textFederation, arrFahrzeugDaten;
-    let textTimeframe, textAvailableCar, textStartMission, textInvolved, textLoading, textHours, textMinutes, textSeconds, textOptions, textKilometers;
+    let textTimeframe, textAvailableCar, textStartMission, textInvolved, textLoading, textHours, textMinutes, textSeconds, textOptions, textKilometers, textReachable;
 
     if(I18n.locale == "de"){
         arrFahrzeugDaten = arrFahrzeugDatenDE;
@@ -199,6 +199,7 @@
         textEvent = "Event";
         textFederation = "Verband";
         textKilometers = "km";
+        textReachable = "Einsatz noch zu erreichen";
     } else if(I18n.locale == "en"){
         arrFahrzeugDaten = arrFahrzeugDatenEN;
         textSaved = "Saved";
@@ -222,6 +223,7 @@
         textEvent = "Event";
         textFederation = "Alliance";
         textKilometers = "miles";
+        textReachable = "Mission is still reachable";
     } else if(I18n.locale == "fj"){
         arrFahrzeugDaten = arrFahrzeugDatenFJ;
         textSaved = "Saved";
@@ -245,6 +247,7 @@
         textEvent = "Event";
         textFederation = "Alliance";
         textKilometers = "miles";
+        textReachable = "Mission is still reachable";
     }
 
     if (localStorage.getItem("jit_own_missions") === null) {
@@ -407,7 +410,7 @@
 
         if($('div[id^="mission_bar_"] >> .progress-bar').css("width") == 0 + "px"){
             textClass = "alert-info";
-            endText = "Einsatz noch zu erreichen.";
+            endText = textReachable + ".";
         }
 
         let ownVehiclesOnDrive = $("#mission_vehicle_driving >> tr").find("td.hidden-xs >> a.btn-backalarm-ajax").length;
