@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         JustInTime
-// @version      1.1.0
+// @version      1.1.1
 // @author       Allure149
 // @include      *://leitstellenspiel.de/missions/*
 // @include      *://www.leitstellenspiel.de/missions/*
@@ -165,7 +165,7 @@
                                 {id: 7, name: "HazMat Unit", personal: 6},
                                 {id: 8, name: "Incident response vehicle (IRV)", personal: 2},
                                 {id: 9, name: "SAR helicopter", personal: 2},
-                                {id: 10, name: "Rapid Response Vehicle", personal: 2},
+                                {id: 10, name: "Rapid Response Vehicle", personal: 1},
                                 {id: 11, name: "Police helicopter", personal: 3},
                                 {id: 12, name: "Dog Support Unit (DSU)", personal: 2},
                                 {id: 13, name: "Armed Response Vehicle (ARV)", personal: 4},
