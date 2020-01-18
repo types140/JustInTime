@@ -155,23 +155,23 @@
                                 { id: 28, name: "EMS Rescue", personal: 5},
                                 { id: 29, name: "EMS Chief", personal: 1}];
 
-    const arrFahrzeugDatenFJ = [{id: 0, name: "Water Ladder", personal: 0},
-                                {id: 1, name: "Light 4X4 Pump (L4P)", personal: 0},
-                                {id: 2, name: "Aerial Appliance", personal: 0},
-                                {id: 3, name: "Fire Officer", personal: 0},
-                                {id: 4, name: "Rescue Support Unit (RSU)", personal: 0},
+    const arrFahrzeugDatenFJ = [{id: 0, name: "Water Ladder", personal: 9},
+                                {id: 1, name: "Light 4X4 Pump (L4P)", personal: 5},
+                                {id: 2, name: "Aerial Appliance", personal: 3},
+                                {id: 3, name: "Fire Officer", personal: 3},
+                                {id: 4, name: "Rescue Support Unit (RSU)", personal: 5},
                                 {id: 5, name: "Ambulance", personal: 2},
-                                {id: 6, name: "Water Carrier", personal: 0},
-                                {id: 7, name: "HazMat Unit", personal: 0},
+                                {id: 6, name: "Water Carrier", personal: 3},
+                                {id: 7, name: "HazMat Unit", personal: 6},
                                 {id: 8, name: "Incident response vehicle (IRV)", personal: 6},
                                 {id: 9, name: "SAR helicopter", personal: 2},
                                 {id: 10, name: "Rapid Response Vehicle", personal: 2},
                                 {id: 11, name: "Police helicopter", personal: 6},
                                 {id: 12, name: "Dog Support Unit (DSU)", personal: 6},
                                 {id: 13, name: "Armed Response Vehicle (ARV)", personal: 6},
-                                {id: 14, name: "Breathing Apparatus Support Unit (BASU)", personal: 0},
-                                {id: 15, name: "Incident Command and Control Unit (ICCU)", personal: 0},
-                                {id: 16, name: "Rescue Pump", personal: 0}];
+                                {id: 14, name: "Breathing Apparatus Support Unit (BASU)", personal: 3},
+                                {id: 15, name: "Incident Command and Control Unit (ICCU)", personal: 6},
+                                {id: 16, name: "Rescue Pump", personal: 9}];
 
     let textSaved, textOwnMissions, textAfter, textRepresent, textWarning, textCheckCars, textClose, textSave, textSelection, textEvent, textFederation, arrFahrzeugDaten;
     let textTimeframe, textAvailableCar, textStartMission, textInvolved, textLoading, textHours, textMinutes, textSeconds, textOptions, textKilometers, textReachable;
@@ -224,7 +224,7 @@
         textFederation = "Alliance";
         textKilometers = "miles";
         textReachable = "Mission is still reachable";
-    } else if(I18n.locale == "fj"){
+    } else if(I18n.locale == "en_GB"){
         arrFahrzeugDaten = arrFahrzeugDatenFJ;
         textSaved = "Saved";
         textOwnMissions = "Invole owned missions";
