@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         JustInTime
-// @version      1.1.0
+// @version      1.1.1
 // @author       Allure149
 // @include      *://leitstellenspiel.de/missions/*
 // @include      *://www.leitstellenspiel.de/missions/*
@@ -200,7 +200,7 @@
         textFederation = "Verband";
         textKilometers = "km";
         textReachable = "Einsatz noch zu erreichen";
-    } else if(I18n.locale == "en"){
+    } else if(I18n.locale == "en_US"){
         arrFahrzeugDaten = arrFahrzeugDatenEN;
         textSaved = "Saved";
         textOwnMissions = "Invole owned missions";
@@ -224,7 +224,7 @@
         textFederation = "Alliance";
         textKilometers = "miles";
         textReachable = "Mission is still reachable";
-    } else if(I18n.locale == "fj"){
+    } else if(I18n.locale == "en_GB"){
         arrFahrzeugDaten = arrFahrzeugDatenFJ;
         textSaved = "Saved";
         textOwnMissions = "Invole owned missions";
