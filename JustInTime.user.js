@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         JustInTime
-// @version      1.1.1
+// @version      1.1.2
 // @author       Allure149
 // @include      *://leitstellenspiel.de/missions/*
 // @include      *://www.leitstellenspiel.de/missions/*
@@ -176,7 +176,7 @@
     let textSaved, textOwnMissions, textAfter, textRepresent, textWarning, textCheckCars, textClose, textSave, textSelection, textEvent, textFederation, arrFahrzeugDaten;
     let textTimeframe, textAvailableCar, textStartMission, textInvolved, textLoading, textHours, textMinutes, textSeconds, textOptions, textKilometers, textReachable;
 
-    if(I18n.locale == "de"){
+    if(I18n.locale == "de_DE"){
         arrFahrzeugDaten = arrFahrzeugDatenDE;
         textSaved = "Gespeichert";
         textOwnMissions = "Eigene Einsätze einbeziehen";
