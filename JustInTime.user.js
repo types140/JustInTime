@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         JustInTime
-// @version      1.1.2
+// @version      1.1.3
 // @author       Allure149
 // @include      *://leitstellenspiel.de/missions/*
 // @include      *://www.leitstellenspiel.de/missions/*
@@ -85,7 +85,7 @@
                                 { id: 50, name: "GruKw", personal: 9 },
                                 { id: 51, name: "FüKw", personal: 3 },
                                 { id: 52, name: "GefKw", personal: 2 },
-                                { id: 53, name: "Dekon-P", personal: 6 },
+                                { id: 53, name: "GW Dekon-P", personal: 6 },
                                 { id: 54, name: "AB-Dekon-P", personal: 0 },
                                 { id: 55, name: "KdoW-LNA", personal: 1 },
                                 { id: 56, name: "KdoW-OrgL", personal: 1 },
@@ -119,10 +119,14 @@
                                 { id: 84, name: "ULF mit Löscharm", personal: 3 },
                                 { id: 85, name: "TM 50", personal: 3 },
                                 { id: 86, name: "Turbolöscher", personal: 3 },
-                                { id: 87, name: "TLF 4000", personal: 3},
-                                { id: 88, name: "KLF", personal: 6},
-                                { id: 89, name: "MLF", personal: 6},
-                                { id: 90, name: "HLF 10", personal: 9}];
+                                { id: 87, name: "TLF 4000", personal: 3 },
+                                { id: 88, name: "KLF", personal: 6 },
+                                { id: 89, name: "MLF", personal: 6 },
+                                { id: 90, name: "HLF 10", personal: 9 },
+                                { id: 91, name: "Rettungshundefahrzeug", personal: 5 },
+                                { id: 92, name: "Anh Hund", personal: 0 },
+                                { id: 93, name: "MTW-OV", personal: 5 },
+                                { id: 94, name: "DHuFüKw", personal: 2}];
 
     const arrFahrzeugDatenEN = [{ id: 0, name: "Type 1 fire engine", personal: 6},
                                 { id: 1, name: "Type 2 fire engine", personal: 3},
@@ -151,9 +155,19 @@
                                 { id: 24, name: "Large Fireboat", personal: 0},
                                 { id: 25, name: "Large Rescue Boat", personal: 0},
                                 { id: 26, name: "SWAT SUV", personal: 4},
-                                { id: 27, name: "BLS Ambulance", personal: 2},
-                                { id: 28, name: "EMS Rescue", personal: 5},
-                                { id: 29, name: "EMS Chief", personal: 1}];
+                                { id: 27, name: "BLS Ambulance", personal: 2 },
+                                { id: 28, name: "EMS Rescue", personal: 5 },
+                                { id: 29, name: "EMS Chief", personal: 2 },
+                                { id: 30, name: "Type 3 engine", personal: 5 },
+                                { id: 31, name: "Type 5 engine", personal: 3 },
+                                { id: 32, name: "Type 7 engine", personal: 2 },
+                                { id: 33, name: "Pumper Tanker", personal: 6 },
+                                { id: 34, name: "Crew Carrier", personal: 12 },
+                                { id: 35, name: "Water drop helicopter", personal: 5 },
+                                { id: 36, name: "Air tanker", personal: 5 },
+                                { id: 37, name: "Heavy air tanker", personal: 5 },
+                                { id: 38, name: "Type 4 engine", personal: 5 },
+                                { id: 39, name: "Type 6 engine", personal: 2 }];
 
     const arrFahrzeugDatenFJ = [{id: 0, name: "Water Ladder", personal: 9},
                                 {id: 1, name: "Light 4X4 Pump (L4P)", personal: 5},
@@ -164,14 +178,18 @@
                                 {id: 6, name: "Water Carrier", personal: 3},
                                 {id: 7, name: "HazMat Unit", personal: 6},
                                 {id: 8, name: "Incident response vehicle (IRV)", personal: 2},
-                                {id: 9, name: "SAR helicopter", personal: 2},
+                                {id: 9, name: "HEMS", personal: 1},
                                 {id: 10, name: "Rapid Response Vehicle", personal: 1},
                                 {id: 11, name: "Police helicopter", personal: 3},
                                 {id: 12, name: "Dog Support Unit (DSU)", personal: 2},
                                 {id: 13, name: "Armed Response Vehicle (ARV)", personal: 4},
                                 {id: 14, name: "Breathing Apparatus Support Unit (BASU)", personal: 3},
                                 {id: 15, name: "Incident Command and Control Unit (ICCU)", personal: 6},
-                                {id: 16, name: "Rescue Pump", personal: 9}];
+                                {id: 16, name: "Rescue Pump", personal: 9},
+                                {id: 17, name: "CARP", personal: 9},
+                                {id: 18, name: "Co-Responder Vehicle", personal: 1},
+                                {id: 19, name: "Joint Response Unit", personal: 3},
+                                {id: 20, name: "Operational Team Leader", personal: 1}];
 
     let textSaved, textOwnMissions, textAfter, textRepresent, textWarning, textCheckCars, textClose, textSave, textSelection, textEvent, textFederation, arrFahrzeugDaten;
     let textTimeframe, textAvailableCar, textStartMission, textInvolved, textLoading, textHours, textMinutes, textSeconds, textOptions, textKilometers, textReachable;
