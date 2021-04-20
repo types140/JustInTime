@@ -155,8 +155,8 @@
                                 { id: 21, name: "Heavy Rescue + Boat", personal: 4},
                                 { id: 22, name: "Boat Trailer", personal: 0},
                                 { id: 23, name: "Police Motorcycle", personal: 1},
-                                { id: 24, name: "Large Fireboat", personal: 0},
-                                { id: 25, name: "Large Rescue Boat", personal: 0},
+                                { id: 24, name: "Large Fireboat", personal: 7},
+                                { id: 25, name: "Large Rescue Boat", personal: 6},
                                 { id: 26, name: "SWAT SUV", personal: 4},
                                 { id: 27, name: "BLS Ambulance", personal: 2 },
                                 { id: 28, name: "EMS Rescue", personal: 5 },
@@ -170,7 +170,24 @@
                                 { id: 36, name: "Air tanker", personal: 5 },
                                 { id: 37, name: "Heavy air tanker", personal: 5 },
                                 { id: 38, name: "Type 4 engine", personal: 5 },
-                                { id: 39, name: "Type 6 engine", personal: 2 }];
+                                { id: 39, name: "Type 6 engine", personal: 2 },
+                                { id: 40, name: "Dozer Trailer", personal: 0 },
+                                { id: 41, name: "Crew cap semi", personal: 3 },
+                                { id: 42, name: "FBI Unit", personal: 4 },
+                                { id: 43, name: "FBI Investigation Wagon", personal: 4 },
+                                { id: 44, name: "FBI Mobile Command Center", personal: 4 },
+                                { id: 45, name: "FBI Bomb Technician Vehicle", personal: 2 },
+                                { id: 46, name: "FBI Surveillance Drone", personal: 1 },
+                                { id: 47, name: "Sheriff Unit", personal: 2 },
+                                { id: 48, name: "EMS Fire Engine/Ambulance", personal: 6 },
+                                { id: 49, name: "Tactical Ambulance", personal: 3 },
+                                { id: 50, name: "Hazmat Ambulance", personal: 3 },
+                                { id: 51, name: "DEA Unit", personal: 4 },
+                                { id: 52, name: "DEA Clan Lab", personal: 2 },
+                                { id: 53, name: "ATF Unit", personal: 4 },
+                                { id: 54, name: "ATF Lab Vehiclee", personal: 2 },
+                                { id: 55, name: "Patrol Boat", personal: 2 },
+                                { id: 56, name: "Warden's Truck", personal: 2 }];
 
     const arrFahrzeugDatenFJ = [{id: 0, name: "Water Ladder", personal: 9},
                                 {id: 1, name: "Light 4X4 Pump (L4P)", personal: 5},
@@ -192,7 +209,17 @@
                                 {id: 17, name: "CARP", personal: 9},
                                 {id: 18, name: "Co-Responder Vehicle", personal: 1},
                                 {id: 19, name: "Joint Response Unit", personal: 3},
-                                {id: 20, name: "Operational Team Leader", personal: 1}];
+                                {id: 20, name: "Operational Team Leader", personal: 1},
+                                {id: 21, name: "General Practitioner", personal: 1},
+                                {id: 22, name: "Community First Responder", personal: 1},
+                                {id: 23, name: "Crew Carrier", personal: 12},
+                                {id: 24, name: "Traffic Car", personal: 2},
+                                {id: 25, name: "Armed Traffic Car", personal: 2},
+                                {id: 26, name: "Heavy 4x4 Tanker'", personal: 3},
+                                {id: 27, name: "PRV", personal: 2},
+                                {id: 28, name: "SRV", personal: 2},
+                                {id: 29, name: "Welfare Vehicle", personal: 2},
+                                {id: 30, name: "ATV Carrier", personal: 2}];
 
     let textSaved, textOwnMissions, textAfter, textRepresent, textWarning, textCheckCars, textClose, textSave, textSelection, textEvent, textFederation, arrFahrzeugDaten;
     let textTimeframe, textAvailableCar, textStartMission, textInvolved, textLoading, textHours, textMinutes, textSeconds, textOptions, textKilometers, textReachable;
